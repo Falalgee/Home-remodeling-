@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Falalu — Residential Design &amp; Renovation Studio</title>
+<meta name="description" content="Falalu is a residential design and renovation studio crafting architectural transformations with timeless materials, understated proportion, and rigorous project delivery." />
+<meta name="theme-color" content="#fbf9f5" />
+<meta property="og:title" content="Falalu — Residential Design &amp; Renovation Studio" />
+<meta property="og:description" content="Architectural residential renovations crafted with timeless materials and rigorous project delivery." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+<script>document.documentElement.className = document.documentElement.className.replace('no-js','js');</script>
+<style>
+  :root {
+    --ink: #1b1c1a;
+    --ink-muted: #4d4540;
+    --ink-subtle: #6b635d;
+    --line: rgba(27, 28, 26, 0.08);
+    --line-strong: rgba(27, 28, 26, 0.14);
+    --surface-1: #fbf9f5;
+    --surface-2: #f5f3ef;
+    --surface-3: #efeeea;
+    --accent: #775a19;
+    --accent-soft: #c8a75a;
+    --on-dark: #f2f0ed;
+    --on-dark-muted: #a8a29b;
+  }
+
+  * { -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    overscroll-behavior-y: none;
+    font-feature-settings: "ss01", "cv01", "cv11";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(27,28,26,0.12); border-radius: 999px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(27,28,26,0.2); }
+
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+  .skip-link {
+    position: absolute; left: -9999px; top: 0;
+    background: var(--ink); color: #fff;
+    padding: 0.75rem 1rem; z-index: 100;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .skip-link:focus { left: 1rem; top: 1rem; }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+
+  /* ---------- Type scale ---------- */
+  .eyebrow {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.6875rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-subtle); line-height: 1;
+  }
+  .eyebrow-accent { color: var(--accent); }
+  .eyebrow-light { color: var(--accent-soft); }
+
+  .display {
+    font-family: 'Playfair Display', serif; font-weight: 400;
+    font-size: clamp(2.25rem, 5.5vw, 3.5rem);
+    line-height: 1.05; letter-spacing: -0.025em; color: var(--ink);
+  }
+  .h-section {
+    font-family: 'Playfair Display', serif; font-weight: 400;
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+    line-height: 1.15; letter-spacing: -0.02em; color: var(--ink);
+  }
+  .h-card {
+    font-family: 'Playfair Display', serif; font-weight: 500;
+    font-size: 1.25rem; line-height: 1.35;
+    letter-spacing: -0.01em; color: var(--ink);
+  }
+  .h-mini {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8125rem; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink);
+  }
+
+  .body-lg { font-size: 1.0625rem; line-height: 1.7; color: var(--ink-muted); }
+  .body    { font-size: 0.9375rem; line-height: 1.65; color: var(--ink-muted); }
+  .body-sm { font-size: 0.84375rem; line-height: 1.6; color: var(--ink-muted); }
+  .meta {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.6875rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-subtle); line-height: 1.4;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 0.5rem; height: 2.75rem; padding: 0 1.25rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.6875rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    white-space: nowrap; border-radius: 2px;
+    transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease, transform 100ms ease;
+    cursor: pointer; user-select: none;
+  }
+  .btn:active { transform: translateY(0.5px); }
+  .btn-primary { background: var(--ink); color: #fff; border: 1px solid var(--ink); }
+  .btn-primary:hover { background: #35332f; border-color: #35332f; }
+  .btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--line-strong); }
+  .btn-secondary:hover { background: var(--surface-2); border-color: rgba(27,28,26,0.22); }
+  .btn-accent { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
+  .btn-accent:hover { background: #604814; border-color: #604814; }
+  .btn-solid-light { background: #fbf9f5; color: var(--ink); border: 1px solid #fbf9f5; }
+  .btn-solid-light:hover { background: #fff; border-color: #fff; }
+  .btn-on-dark { background: rgba(255,255,255,0.06); color: #fff; border: 1px solid rgba(255,255,255,0.14); }
+  .btn-on-dark:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.24); }
+
+  /* ---------- Links ---------- */
+  .link-quiet {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.6875rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink); display: inline-flex; align-items: center; gap: 0.5rem;
+    transition: color 150ms ease;
+  }
+  .link-quiet:hover { color: var(--accent); }
+  .link-accent {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.6875rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); display: inline-flex; align-items: center; gap: 0.5rem;
+    transition: color 150ms ease;
+  }
+  .link-accent:hover { color: var(--ink); }
+
+  /* ---------- Nav ---------- */
+  .nav-link {
+    position: relative;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-muted); padding: 0.5rem 0;
+    transition: color 150ms ease;
+  }
+  .nav-link:hover { color: var(--ink); }
+  .nav-link::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -1px;
+    height: 1px; background: var(--ink);
+    transform: scaleX(0); transform-origin: left center;
+    transition: transform 200ms ease;
+  }
+  .nav-link:hover::after { transform: scaleX(1); }
+  .nav-link[aria-current="page"] { color: var(--ink); }
+  .nav-link[aria-current="page"]::after { transform: scaleX(1); }
+
+  /* ---------- Micro ---------- */
+  .surface-hair { border-top: 1px solid var(--line); }
+  .img-hover { transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1); }
+  .group:hover .img-hover { transform: scale(1.035); }
+
+  .tag {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.625rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-muted);
+    padding: 0.25rem 0.5rem;
+    background: var(--surface-3);
+    border-radius: 2px;
+  }
+
+  /* ---------- Mobile menu ---------- */
+  #mobile-menu[hidden] { display: none; }
+  #mobile-menu:not([hidden]) { animation: menu-in 200ms cubic-bezier(0.22, 1, 0.36, 1); }
+  @keyframes menu-in {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ============================================================
+     REVEAL ANIMATIONS
+     - Only active when JS is loaded (html.js) and reduced motion
+       is not preferred. Falls back to visible content otherwise.
+     ============================================================ */
+  @media (prefers-reduced-motion: no-preference) {
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(10px);
+      transition:
+        opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: var(--d, 0ms);
+      will-change: opacity, transform;
+    }
+    html.js .reveal.in {
+      opacity: 1;
+      transform: none;
+      will-change: auto;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+    html { scroll-behavior: auto; }
+    html.js .reveal { opacity: 1 !important; transform: none !important; }
+  }
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        ink: "#1b1c1a",
+        "ink-muted": "#4d4540",
+        "ink-subtle": "#6b635d",
+        accent: "#775a19",
+        "accent-soft": "#c8a75a",
+        canvas: "#fbf9f5",
+        "surface-2": "#f5f3ef",
+        "surface-3": "#efeeea",
+        "line-1": "rgba(27, 28, 26, 0.08)",
+        "line-2": "rgba(27, 28, 26, 0.14)",
+        "on-dark-muted": "#a8a29b"
+      },
+      fontFamily: {
+        display: ['"Playfair Display"', 'serif'],
+        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+      },
+      maxWidth: { shell: "1280px" },
+      borderRadius: { xs: "2px", sm: "3px" }
+    }
+  }
+};
+</script>
+</head>
+<body class="bg-canvas font-sans text-[0.9375rem] leading-[1.65] text-ink antialiased">
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ===================== HEADER ===================== -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-canvas border-b border-[var(--line)]">
+  <div class="h-16 lg:h-[72px] max-w-shell mx-auto px-6 lg:px-8 flex items-center justify-between gap-8">
+    <a href="index.html" class="flex items-center gap-2.5 shrink-0" aria-label="Falalu Renovations — Home">
+      <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true" class="h-7 w-7 text-ink shrink-0">
+        <rect x="1.5" y="1.5" width="37" height="37" />
+        <path d="M10 32 V10 H30" stroke-width="1.75" />
+        <path d="M10 21 H24" stroke-width="1.75" />
+      </svg>
+      <span class="flex flex-col leading-none">
+        <span class="font-display text-[1.0625rem] tracking-[-0.01em] text-ink">Falalu</span>
+        <span class="text-[0.625rem] font-semibold tracking-[0.16em] uppercase text-ink-subtle mt-1">Renovations</span>
+      </span>
+    </a>
+
+    <nav aria-label="Primary" class="hidden lg:flex items-center gap-7">
+      <a aria-current="page" href="index.html" class="nav-link">Home</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="our-work.html" class="nav-link">Our Work</a>
+      <a href="our-process.html" class="nav-link">Our Process</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a href="contact.html" class="btn btn-primary hidden sm:inline-flex">Book Consultation</a>
+      <button type="button" id="menu-toggle" class="lg:hidden inline-flex items-center justify-center w-10 h-10 text-ink rounded-xs hover:bg-surface-2 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined text-[22px]" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-menu" aria-label="Mobile" hidden class="lg:hidden border-t border-[var(--line)] bg-canvas">
+    <ul class="max-w-shell mx-auto px-6 py-4 flex flex-col">
+      <li><a href="index.html" class="block py-3 nav-link border-b border-[var(--line)]">Home</a></li>
+      <li><a href="services.html" class="block py-3 nav-link border-b border-[var(--line)]">Services</a></li>
+      <li><a href="our-work.html" class="block py-3 nav-link border-b border-[var(--line)]">Our Work</a></li>
+      <li><a href="our-process.html" class="block py-3 nav-link border-b border-[var(--line)]">Our Process</a></li>
+      <li><a href="about.html" class="block py-3 nav-link border-b border-[var(--line)]">About</a></li>
+      <li><a href="contact.html" class="block py-3 nav-link">Contact</a></li>
+      <li class="pt-4"><a href="contact.html" class="btn btn-primary w-full">Book Consultation</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ===================== MAIN ===================== -->
+<main id="main" class="w-full pt-16 lg:pt-[72px] bg-canvas min-h-screen">
+  <div class="flex flex-col w-full">
+
+    <!-- ============ HERO ============ -->
+    <section aria-labelledby="hero-heading" class="w-full">
+      <div class="max-w-shell mx-auto px-6 lg:px-8 pt-12 lg:pt-20 pb-16 lg:pb-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+
+          <div class="lg:col-span-7 flex flex-col">
+            <p class="eyebrow eyebrow-accent mb-6 reveal" style="--d: 0ms;">Residential Architecture Studio</p>
+
+            <h1 id="hero-heading" class="display max-w-[18ch] reveal" style="--d: 80ms;">
+              Make Room for Better Living.
+            </h1>
+
+            <p class="body-lg mt-7 max-w-[52ch] reveal" style="--d: 160ms;">
+              Architectural residential renovations crafted with timeless materials, understated proportion, and rigorous project delivery — designed for light, presence, and tactile permanence.
+            </p>
+
+            <div class="mt-9 flex flex-wrap items-center gap-3 reveal" style="--d: 240ms;">
+              <a href="contact.html" class="btn btn-primary">
+                <span>Book a Consultation</span>
+                <span class="material-symbols-outlined text-[16px]" aria-hidden="true">arrow_forward</span>
+              </a>
+              <a href="our-work.html" class="btn btn-secondary">
+                Explore Portfolio
+              </a>
+            </div>
+
+            <div class="reveal" style="--d: 320ms;">
+              <dl class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-6 pt-8 border-t border-[var(--line)]" aria-describedby="hero-stats-note">
+                <div>
+                  <dt class="meta">Years in Practice</dt>
+                  <dd class="mt-2 font-display text-[1.75rem] leading-none tracking-[-0.02em] text-ink">12<span class="text-accent">+</span></dd>
+                </div>
+                <div>
+                  <dt class="meta">Design Lead</dt>
+                  <dd class="mt-2 font-display text-[1.75rem] leading-none tracking-[-0.02em] text-ink">1:1</dd>
+                </div>
+                <div>
+                  <dt class="meta">Fixed Scope</dt>
+                  <dd class="mt-2 font-display text-[1.75rem] leading-none tracking-[-0.02em] text-ink">100<span class="text-accent">%</span></dd>
+                </div>
+                <div>
+                  <dt class="meta">Master Artisans</dt>
+                  <dd class="mt-2 font-display text-[1.75rem] leading-none tracking-[-0.02em] text-ink">6<span class="text-accent">+</span></dd>
+                </div>
+              </dl>
+              <p id="hero-stats-note" class="meta mt-5">Illustrative figures — conceptual portfolio demonstration</p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 reveal" style="--d: 180ms;">
+            <figure class="group relative w-full aspect-[4/5] overflow-hidden bg-surface-3">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBsw4MkuSUjfHUJAp958C31Z-Y1BGgJyZVoLE_zz2qutPj0H6ieALGobMzAvColHOy8cmE83s1tBW3udjWgUR2Kc4ZeVMy9HwAH74Q4o1QvvBOhpCOkYunTws5oJqlJY2-lF9WS75S4zxQDybSeODUcTGJ3nOy-u5SQjNJ0PlTzJcN9XhYAz2oV58bJqOvPaWb6WR1p0Ektg-7gsNWZk-vs4s5aqT8_eownaoM3WbFpSTJCW3skHtw"
+                alt="Architectural photograph of a Scandinavian modern kitchen with rift-sawn white oak cabinetry, a fluted marble island, and steel-framed windows in warm morning light."
+                width="1200" height="1500" fetchpriority="high" decoding="async"
+                class="w-full h-full object-cover img-hover" />
+            </figure>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PILLARS ============ -->
+    <section aria-label="Practice pillars" class="w-full border-y border-[var(--line)] bg-surface-2">
+      <div class="max-w-shell mx-auto px-6 lg:px-8 py-14 lg:py-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 sm:gap-x-8 lg:gap-x-12">
+          <div class="flex flex-col reveal" style="--d: 0ms;">
+            <span class="material-symbols-outlined text-[22px] text-accent mb-5" aria-hidden="true">architecture</span>
+            <h2 class="h-mini">Spatial Restraint</h2>
+            <p class="body-sm mt-3">Natural airiness, deliberate flow, and visual balance over extraneous ornamentation.</p>
+          </div>
+          <div class="flex flex-col reveal" style="--d: 80ms;">
+            <span class="material-symbols-outlined text-[22px] text-accent mb-5" aria-hidden="true">carpenter</span>
+            <h2 class="h-mini">Bespoke Millwork</h2>
+            <p class="body-sm mt-3">In-house joinery tailored to millimeter tolerances in solid European oak, ash, and walnut.</p>
+          </div>
+          <div class="flex flex-col reveal" style="--d: 160ms;">
+            <span class="material-symbols-outlined text-[22px] text-accent mb-5" aria-hidden="true">verified_user</span>
+            <h2 class="h-mini">Fixed Guarantees</h2>
+            <p class="body-sm mt-3">Guaranteed architectural timelines and transparent procurement schedules set on day one.</p>
+          </div>
+          <div class="flex flex-col reveal" style="--d: 240ms;">
+            <span class="material-symbols-outlined text-[22px] text-accent mb-5" aria-hidden="true">domain</span>
+            <h2 class="h-mini">Structural Mastery</h2>
+            <p class="body-sm mt-3">Load-bearing transformations, foundation engineering, and heritage consent management.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DISCIPLINES ============ -->
+    <section aria-labelledby="disciplines-heading" class="w-full">
+      <div class="max-w-shell mx-auto px-6 lg:px-8 py-20 lg:py-28">
+
+        <header class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end mb-14 lg:mb-16 reveal">
+          <div class="lg:col-span-7">
+            <p class="eyebrow eyebrow-accent mb-4">Specialized Practice</p>
+            <h2 id="disciplines-heading" class="h-section max-w-[22ch]">Renovation Disciplines</h2>
+          </div>
+          <p class="body-sm lg:col-span-5 max-w-[46ch]">
+            Every residential commission is delivered under rigorous direct architectural oversight — unifying layout, envelope engineering, and fine tactile finishes.
+          </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8">
+          <article class="md:col-span-7 group flex flex-col reveal" style="--d: 0ms;">
+            <a href="services.html" class="block relative w-full aspect-[16/10] overflow-hidden bg-surface-3">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs7LmFKgCH_oXR644GeggXG4lQw24RIWecWNbNPSbk9Ouqax_WiAtEWOiWFMbYLeNhHA8ED59QenNue_krqniOjyg-gTEO0lWU55oNLrQgDQhoPMNSDvTSzDDaklI8P_TbUV5Zp8C8TVlZH7ePhmYAyok8LImOlAprYG-CMlPwsvo0a-PInHq5heATIJi57mXakOJxNKhUDz2ToKJZJ8sfF_D3-1-yxsisLhb_YziUotcoFBPqF3O0" alt="Open-concept custom kitchen with reeded oak millwork and quartzite splashbacks." loading="lazy" decoding="async" class="w-full h-full object-cover img-hover" />
+            </a>
+            <div class="mt-6">
+              <h3 class="h-card">Architectural Kitchens</h3>
+              <p class="body-sm mt-3 max-w-[52ch]">Central culinary zones conceived as monumental furniture — concealed cabinetry, stone fabrication, and seamless appliance integration.</p>
+              <div class="mt-5 flex flex-wrap gap-1.5">
+                <span class="tag">Bookmatched Marble</span>
+                <span class="tag">Timber Joinery</span>
+                <span class="tag">Concealed Systems</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="md:col-span-5 group flex flex-col reveal" style="--d: 80ms;">
+            <a href="services.html" class="block relative w-full aspect-[4/3] overflow-hidden bg-surface-3">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc7miyY_ct74b2s6Okr1g6fGMGn4RqOmpIIM4ljz8_C4kg1sxLUwpKXI_o8podXDoY1-MLQ9lolnZMuWQGLg8h7RKqVrMHI2Nqf-jr2VjgkUtUTWs392qWKZ_VGYHuk-gLWka_imQcR_I-p6L4Y6zxhat70JTz1Lt_Si1rCI-keitHmCiJY9sFl0BTNhkCUoUsMVuLZiatm1RtoQR2gkJoNkBuzESHSdEG6xDfK7o3TZ0fpYwFTqpP" alt="Sanctuary bathroom with a free-standing limestone soaking tub and unlacquered brass fixtures." loading="lazy" decoding="async" class="w-full h-full object-cover img-hover" />
+            </a>
+            <div class="mt-6">
+              <h3 class="h-card">Bathroom Sanctuaries</h3>
+              <p class="body-sm mt-3">Tactile wet-rooms and spa retreats emphasizing monolithic stone, seamless Venetian plaster, and radiant comfort.</p>
+              <div class="mt-5 flex flex-wrap gap-1.5">
+                <span class="tag">Tadelakt</span>
+                <span class="tag">Microcement</span>
+                <span class="tag">Custom Vanities</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="md:col-span-6 group flex flex-col reveal" style="--d: 160ms;">
+            <a href="services.html" class="block relative w-full aspect-[16/10] overflow-hidden bg-surface-3">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsasJaTipqv-7gJsw87DLoaaNL2-5vB58HCJev_he8dBd-XKpFOsJPOTS7OEaL1hgwidkJRcNKqMc5P19uBD8x712WjfjJjWpDGlB08StHIbL0imcVTUISkUpzNGa1mgKtjZHIPu9PDwu47aqBREG2ROY16iMykpqhCqhjNuQGoC63E0j0GxnJB_R7BxdSS8JOqsTilRnL1ucwMmqovbmxYTCCNIj7WFzODy63c4j-rZo7Nj2Wrp81" alt="Expansive open-plan living room renovation inside a historic townhouse." loading="lazy" decoding="async" class="w-full h-full object-cover img-hover" />
+            </a>
+            <div class="mt-6">
+              <h3 class="h-card">Whole-Home Renovations</h3>
+              <p class="body-sm mt-3">Full interior gut restorations, load-bearing reconfiguration, and contemporary spatial planning that preserves heritage architecture.</p>
+            </div>
+          </article>
+
+          <article class="md:col-span-6 group flex flex-col reveal" style="--d: 240ms;">
+            <a href="services.html" class="block relative w-full aspect-[16/10] overflow-hidden bg-surface-3">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAarGHm0hqSphzdafT8nhIp_-FklKw7Cban5VzfRaosOgptFo_myHvzgtw_766tlVhXQUCcnsNZZwCuRI4CAc0nqwoOSVxPcUASfx-St6BlMZbc-Xfx3Cw1UNQ6MowfGNA6pJDI3zvmq8o9YCgDsKAsdnFa0H2AoQS6sIH37Alk4M79KsmDNYMcfz5Rty3kslrdDjImqAQplMuBabCQ7fmS50jvCo2kRt3e9__fcLYL8CAjbt1pMMqt" alt="Library and study room with floor-to-ceiling smoked oak bookcases and herringbone parquetry." loading="lazy" decoding="async" class="w-full h-full object-cover img-hover" />
+            </a>
+            <div class="mt-6">
+              <h3 class="h-card">Architectural Millwork</h3>
+              <p class="body-sm mt-3">Precision built-in wardrobes, architectural paneling, library suites, and artisan French oak parquetry laid with museum-grade alignment.</p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ BEFORE / AFTER ============ -->
+    <section aria-labelledby="compare-heading" class="w-full bg-surface-2 border-y border-[var(--line)]">
+      <div class="max-w-shell mx-auto px-6 lg:px-8 py-20 lg:py-28">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+
+          <div class="lg:col-span-5 flex flex-col reveal">
+            <p class="eyebrow eyebrow-accent mb-4">Material Metamorphosis</p>
+            <h2 id="compare-heading" class="h-section max-w-[18ch]">From Obscurity to Spatial Clarity</h2>
+            <p class="body mt-6 max-w-[46ch]">
+              See how deliberate structural reallocation and honest material selection liberate residential volumes. In this Edwardian kitchen transformation, compartmentalized partitions were removed to welcome continuous daylight and serene functionality.
+            </p>
+
+            <ul class="mt-9 space-y-5">
+              <li class="flex items-start gap-3.5">
+                <span class="material-symbols-outlined text-accent text-[20px] mt-0.5 shrink-0" aria-hidden="true">check_circle</span>
+                <div>
+                  <h3 class="h-mini">Load-Bearing Wall Removal</h3>
+                  <p class="body-sm mt-1.5">Structural steel frame integrated invisibly into the ceiling plenum.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3.5">
+                <span class="material-symbols-outlined text-accent text-[20px] mt-0.5 shrink-0" aria-hidden="true">check_circle</span>
+                <div>
+                  <h3 class="h-mini">Custom Fluted Travertine Island</h3>
+                  <p class="body-sm mt-1.5">Weight-bearing honed stone anchor functioning as culinary theater.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="mt-10">
+              <a href="our-work.html" class="link-accent">
+                View Full Case Study
+                <span class="material-symbols-outlined text-[14px]" aria-hidden="true">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 reveal" style="--d: 120ms;">
+            <div id="comparison-slider-container" class="relative w-full aspect-[16/11] select-none overflow-hidden bg-surface-3">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ7R-IGvuZS65iS8WnyAT8HTgL8tX9cw63iMxUxCXUvj3RRPG3jbUc0b_U54J305NgEExx18jkQh7bhvrWGKwXxLcpRzMe6BrcR1KL39vcSEYSnWawdWCt8f-Dgwcw-33KNuf9hp5J_fq7TA7BSJPAfyPJ7Y_Mc1LMrgd2O6vLSD0PP6sh3FbMIcTsHoTGTV9TTgIK-hPsvndnToW5Xd5KdsRaHy8UhofTjnYhKanzumeRy43mq4KM" alt="Completed renovation — an airy open kitchen with warm timber cabinetry, a beige travertine island, and a large skylight." loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" />
+              <div id="comparison-clipped-layer" class="absolute inset-0 overflow-hidden" style="width:50%;">
+                <img id="comparison-before-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm_O4JExSRvf_neOIcLvRe5X3YogdvJrVqcN3ixObIx-iqZVBjL3F8yMkwq_lTi9LZR-0Heps0tWvZHdjNxqIDoOSc_CmLVwYV78aEZGEEZ7T_RDqWL0BqOOLumd5iJZf0JdXzJYXTG4QPJtqJDzlq9Y_mkwTGhCGzttK9Fi0Uey5sjRolQL4U5JE9MSOuSzWQDjmFQrvwqKCQUmStTwuo3iMEH2TZmeihmMXLzZ4639w73N5OVpCS" alt="Before photograph — a dated dark 1970s kitchen." loading="lazy" decoding="async" class="absolute top-0 left-0 max-w-none h-full object-cover" />
+              </div>
+              <div id="comparison-divider" class="absolute top-0 bottom-0 w-px bg-white/90 shadow-[0_0_0_1px_rgba(0,0,0,0.08)] pointer-events-none" style="left:50%;">
+                <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 bg-ink text-white rounded-full flex items-center justify-center shadow-lg ring-1 ring-white/20" aria-hidden="true">
+                  <span class="material-symbols-outlined text-[16px]">drag_indicator</span>
+                </div>
+              </div>
+              <input id="comparison-range" type="range" min="0" max="100" value="50"
+                     aria-label="Compare before and after transformation"
+                     aria-describedby="slider-help"
+                     class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" />
+              <p id="slider-help" class="sr-only">Use the left and right arrow keys to move the divider and compare the before and after states.</p>
+            </div>
+            <p class="meta mt-4 text-center" aria-hidden="true">Drag to compare</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RECENT COMMISSIONS ============ -->
+    <section aria-labelledby="commissions-heading" class="w-full">
+      <div class="max-w-shell mx-auto px-6 lg:px-8 py-20 lg:py-28">
+
+        <header class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14 reveal">
+          <div>
+            <p class="eyebrow eyebrow-accent mb-4">Selected Portfolio</p>
+            <h2 id="commissions-heading" class="h-section">Recent Commissions</h2>
+          </div>
+          <a href="our-work.html" class="link-quiet">
+            View All Works
+            <span class="material-symbols-outlined text-[14px]" aria-hidden="true">arrow_forward</span>
+          </a>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
+          <article class="group flex flex-col reveal" style="--d: 0ms;">
+            <a href="our-work.html" class="block relative aspect-[4/5] overflow-hidden bg-surface-3">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNPjEfh2lnjC_-acZOSeNz7acH31ewVqBgYd9nnRaD0P7gQT84Qq9wLGfI38D5XLHzp3DV4JYraTLjfGQOT8FbiDAnfA2dIEcBhnSEhmi4R8bo5bDMRd2hq2peNq2ebt5Woxp1YQmhxTRksMFZV6-mNz6mSIl2y-bDP6DwAPtD1XeYhyzniGrEtL3ON3zjmKt227TEu88jhQgx-7lFLInhixbooU5APQ75UuSIozYGH-do4b-mvqut" alt="Serene double-height living room of The Waverley Residence with lime-washed walls and steel french windows." loading="lazy" decoding="async" class="w-full h-full object-cover img-hover" />
+            </a>
+            <div class="mt-5">
+              <p class="meta">Full Home Restoration · 4,200 sq.ft</p>
+              <h3 class="h-card mt-3">The Waverley Residence</h3>
+              <p class="body-sm mt-2.5 max-w-[42ch]">Complete gut-rehabilitation of an 1890s townhouse balancing historical plasterwork with quiet contemporary minimalism.</p>
+            </div>
+          </article>
+
+          <article class="group flex flex-col reveal" style="--d: 80ms;">
+            <a href="our-work.html" class="block relative aspect-[4/5] overflow-hidden bg-surface-3">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDZx8vjUPEDD7mXcxVLpbZ-hDPQMlVkk78IK656lNxV3WYn026itFLWl3LRaWQelGtblzzvJuyYMjqXtrtnisk7WUQOnPktzdiI1g2cKSVtWAob8y-bQT-hJ5-_nZmH8huiTI4AJ_xdTcxlpDA4tTn6BMyzRmVswjE8FqD9lFtJTlhDwIwrQQkHHw8yIeoX6OaCopKKhlHyy9UyzTrP67U68tw7Bsti3z37WPKZwLutoBOZPJcixX9" alt="Kensington Mews bespoke kitchen and butler pantry with deep olive green cabinets and brass knobs." loading="lazy" decoding="async" class="w-full h-full object-cover img-hover" />
+            </a>
+            <div class="mt-5">
+              <p class="meta">Kitchen &amp; Joinery · 1,800 sq.ft</p>
+              <h3 class="h-card mt-3">Kensington Mews</h3>
+              <p class="body-sm mt-2.5 max-w-[42ch]">A reconfigured coach house kitchen incorporating architectural pocket pantries and custom brass-framed glass screening.</p>
+            </div>
+          </article>
+
+          <article class="group flex flex-col reveal" style="--d: 160ms;">
+            <a href="our-work.html" class="block relative aspect-[4/5] overflow-hidden bg-surface-3">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL7uc2De4dIvNrw8T1tYaHC_F-cYZU3GTiPTqnhpnelfPVHJXeQdxDo8BAUyD8sdfAxW9anJyL1jTlPnKst_rMojihQwtT2lJR9M1OylDvPzseg-vKa1L2B3a6uSL-6uUB8cCWt6jWq3Dp-QBOFABGxUkgjtGHL2-FAvg03hVoVOKKU0mL0YqT1-VuTKLM9hAwfEjF1q4c4FTcHkfNQsa2qJ0eQYiExEeVh1buuQxlW4lQQGLr-FmT" alt="Oakmont Pavilion master bath with a walk-in rainfall shower and floating cedar vanity." loading="lazy" decoding="async" class="w-full h-full object-cover img-hover" />
+            </a>
+            <div class="mt-5">
+              <p class="meta">Master Suite Bath · 950 sq.ft</p>
+              <h3 class="h-card mt-3">Oakmont Pavilion</h3>
+              <p class="body-sm mt-2.5 max-w-[42ch]">A monastic master bath sanctuary sculpted with continuous French limestone and bespoke solid cedar cabinetry.</p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section aria-labelledby="process-heading" class="w-full bg-surface-2 border-y border-[var(--line)]">
+      <div class="max-w-shell mx-auto px-6 lg:px-8 py-20 lg:py-28">
+
+        <header class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end mb-14 reveal">
+          <div class="lg:col-span-7">
+            <p class="eyebrow eyebrow-accent mb-4">Architectural Rigor</p>
+            <h2 id="process-heading" class="h-section max-w-[22ch]">Our Collaborative Rhythm</h2>
+            <p class="body mt-5 max-w-[52ch]">A linear, stress-free cadence engineered to deliver exacting craftsmanship without scheduling ambiguities or budgetary drift.</p>
+          </div>
+          <div class="lg:col-span-5 flex lg:justify-end">
+            <a href="our-process.html" class="btn btn-secondary">Explore Delivery Flow</a>
+          </div>
+        </header>
+
+        <ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+          <li class="border-t border-[var(--line)] pt-8 pb-8 lg:pb-0 sm:pr-8 lg:px-6 lg:first:pl-0 lg:last:pr-0 reveal" style="--d: 0ms;">
+            <span class="font-display text-[1.5rem] text-accent leading-none">01</span>
+            <h3 class="h-mini mt-5">Discovery &amp; Site Audit</h3>
+            <p class="body-sm mt-3">Laser-scanning, structural appraisal, and lifestyle intention mapping.</p>
+            <p class="meta mt-5">Weeks 1 – 2</p>
+          </li>
+          <li class="border-t border-[var(--line)] pt-8 pb-8 lg:pb-0 sm:pl-8 lg:px-6 lg:first:pl-0 lg:last:pr-0 reveal" style="--d: 60ms;">
+            <span class="font-display text-[1.5rem] text-accent leading-none">02</span>
+            <h3 class="h-mini mt-5">Design &amp; Material Palettes</h3>
+            <p class="body-sm mt-3">3D spatial models, joinery details, and physical tactile sample boards.</p>
+            <p class="meta mt-5">Weeks 3 – 6</p>
+          </li>
+          <li class="border-t border-[var(--line)] pt-8 pb-8 lg:pb-0 sm:pr-8 lg:px-6 lg:first:pl-0 lg:last:pr-0 reveal" style="--d: 120ms;">
+            <span class="font-display text-[1.5rem] text-accent leading-none">03</span>
+            <h3 class="h-mini mt-5">Fixed Scope &amp; Permits</h3>
+            <p class="body-sm mt-3">Itemized bill of quantities, heritage filings, and engineering approvals.</p>
+            <p class="meta mt-5">Weeks 7 – 8</p>
+          </li>
+          <li class="border-t border-[var(--line)] pt-8 pb-8 lg:pb-0 sm:pl-8 lg:px-6 lg:first:pl-0 lg:last:pr-0 reveal" style="--d: 180ms;">
+            <span class="font-display text-[1.5rem] text-accent leading-none">04</span>
+            <h3 class="h-mini mt-5">Master Build &amp; Craft</h3>
+            <p class="body-sm mt-3">Direct site orchestration, dust containment, and joinery fabrication.</p>
+            <p class="meta mt-5">Phase Duration</p>
+          </li>
+          <li class="border-t border-[var(--line)] pt-8 pb-8 lg:pb-0 sm:pr-8 lg:px-6 lg:first:pl-0 lg:last:pr-0 reveal" style="--d: 240ms;">
+            <span class="font-display text-[1.5rem] text-accent leading-none">05</span>
+            <h3 class="h-mini mt-5">White-Glove Handover</h3>
+            <p class="body-sm mt-3">Zero-punchlist walk-through, archival binder, and warranty activation.</p>
+            <p class="meta mt-5">Final Milestone</p>
+          </li>
+        </ol>
+
+      </div>
+    </section>
+
+    <!-- ============ REGIONAL FOCUS ============ -->
+    <section aria-labelledby="region-heading" class="w-full">
+      <div class="max-w-shell mx-auto px-6 lg:px-8 py-20 lg:py-28">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+          <div class="lg:col-span-4 reveal">
+            <p class="eyebrow eyebrow-accent mb-4">Coverage &amp; Licensure</p>
+            <h2 id="region-heading" class="h-section max-w-[16ch]">Regional Focus</h2>
+            <p class="body mt-6 max-w-[44ch]">To guarantee daily on-site architectural management and punctual subcontractor supervision, we restrict active concurrent renovations to four primary operational zones.</p>
+          </div>
+
+          <ul class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10">
+            <li class="pt-6 border-t border-[var(--line)] reveal" style="--d: 0ms;">
+              <p class="meta">Region 01</p>
+              <h3 class="h-card mt-3">Metropolitan Core</h3>
+              <p class="body-sm mt-2.5">Penthouses, high-rise conversions, and historic mid-century residential flats.</p>
+            </li>
+            <li class="pt-6 border-t border-[var(--line)] reveal" style="--d: 60ms;">
+              <p class="meta">Region 02</p>
+              <h3 class="h-card mt-3">Historic Suburbs</h3>
+              <p class="body-sm mt-2.5">Georgian estates, Victorian brownstones, and conservation-grade restorations.</p>
+            </li>
+            <li class="pt-6 border-t border-[var(--line)] reveal" style="--d: 120ms;">
+              <p class="meta">Region 03</p>
+              <h3 class="h-card mt-3">Westside Enclaves</h3>
+              <p class="body-sm mt-2.5">Modernist villas, ground-up additions, and open pavilion expansions.</p>
+            </li>
+            <li class="pt-6 border-t border-[var(--line)] reveal" style="--d: 180ms;">
+              <p class="meta">Region 04</p>
+              <h3 class="h-card mt-3">Northern Shoreline</h3>
+              <p class="body-sm mt-2.5">Coastal estates, weather-resilient timber structures, and stone pavilions.</p>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section aria-labelledby="cta-heading" class="w-full bg-ink text-white">
+      <div class="max-w-shell mx-auto px-6 lg:px-8 py-20 lg:py-28">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+          <div class="lg:col-span-8 reveal">
+            <p class="eyebrow eyebrow-light mb-5">Commence Your Project</p>
+            <h2 id="cta-heading" class="font-display text-[clamp(2rem,4.5vw,3rem)] leading-[1.1] tracking-[-0.02em] text-white max-w-[20ch]">
+              Ready to reimagine your living space?
+            </h2>
+            <p class="text-[1.0625rem] leading-[1.7] mt-6 max-w-[52ch]" style="color: var(--on-dark-muted);">
+              Schedule an introductory site consultation with our principal architect to review spatial possibilities, feasibility budgets, and timelines.
+            </p>
+          </div>
+          <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end reveal" style="--d: 120ms;">
+            <a href="contact.html" class="btn btn-solid-light w-full sm:w-auto lg:w-auto">
+              <span>Schedule Site Visit</span>
+              <span class="material-symbols-outlined text-[16px]" aria-hidden="true">event_available</span>
+            </a>
+            <a href="contact.html" class="btn btn-on-dark w-full sm:w-auto lg:w-auto">Inquire by Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="w-full bg-surface-2 border-t border-[var(--line)]">
+  <div class="max-w-shell mx-auto px-6 lg:px-8 py-16 lg:py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 lg:pb-16 border-b border-[var(--line)]">
+
+      <div class="lg:col-span-4 flex flex-col justify-between gap-8">
+        <div>
+          <div class="flex items-center gap-2.5">
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true" class="h-6 w-6 text-ink shrink-0">
+              <rect x="1.5" y="1.5" width="37" height="37" />
+              <path d="M10 32 V10 H30" stroke-width="1.75" />
+              <path d="M10 21 H24" stroke-width="1.75" />
+            </svg>
+            <span class="font-display text-[1.0625rem] tracking-[-0.01em] text-ink">Falalu Renovations</span>
+          </div>
+          <p class="body-sm mt-5 max-w-[40ch]">Architectural residential transformations and bespoke structural craftsmanship — driven by material permanence and deliberate spatial restraint.</p>
+        </div>
+        <blockquote class="font-display italic text-[1.0625rem] leading-[1.6] text-ink/80 border-l border-accent pl-5 max-w-[40ch]">
+          "Architecture is the thoughtful making of spaces for timeless living."
+        </blockquote>
+      </div>
+
+      <nav aria-label="Footer" class="lg:col-span-2">
+        <h2 class="h-mini">Studio</h2>
+        <ul class="mt-6 space-y-3">
+          <li><a href="index.html" class="body-sm hover:text-ink transition-colors">Home</a></li>
+          <li><a href="services.html" class="body-sm hover:text-ink transition-colors">Services &amp; Craft</a></li>
+          <li><a href="our-work.html" class="body-sm hover:text-ink transition-colors">Selected Portfolio</a></li>
+          <li><a href="our-process.html" class="body-sm hover:text-ink transition-colors">Our Process</a></li>
+          <li><a href="about.html" class="body-sm hover:text-ink transition-colors">About Studio</a></li>
+          <li><a href="contact.html" class="body-sm hover:text-ink transition-colors">Inquire &amp; Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="lg:col-span-3">
+        <h2 class="h-mini">Services</h2>
+        <ul class="mt-6 space-y-3 body-sm">
+          <li>Full-Home Architectural Remodeling</li>
+          <li>Bespoke Millwork &amp; Joinery</li>
+          <li>Historic Heritage Restorations</li>
+          <li>Structural Reconfiguration &amp; Extensions</li>
+          <li>Fine Stone &amp; Custom Masonry</li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-3">
+        <h2 class="h-mini">Contact</h2>
+        <address class="mt-6 space-y-4 body-sm not-italic">
+          <div>
+            <p class="text-ink font-medium">Falalu Renovations</p>
+            <p class="mt-1">Studio 7B, 480 Architectural Way<br />Mayfair Heritage District</p>
+          </div>
+          <div>
+            <p><a href="mailto:studio@falalu.example" class="hover:text-ink transition-colors">studio@falalu.example</a></p>
+            <p><a href="tel:+15552348900" class="hover:text-ink transition-colors">+1 (555) 234-8900</a></p>
+          </div>
+          <div>
+            <a href="contact.html" class="link-accent">Request Consultation →</a>
+          </div>
+        </address>
+      </div>
+
+    </div>
+
+    <div class="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+      <p class="meta">© 2025 Falalu Renovations · Conceptual portfolio demonstration</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="meta hover:text-ink transition-colors">Privacy</a>
+        <span class="text-[var(--line-strong)]" aria-hidden="true">·</span>
+        <a href="#" class="meta hover:text-ink transition-colors">Terms</a>
+        <span class="text-[var(--line-strong)]" aria-hidden="true">·</span>
+        <a href="our-work.html" class="meta hover:text-ink transition-colors">Monograph</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- Mobile menu ---------- */
+  var toggle = document.getElementById('menu-toggle');
+  var menu = document.getElementById('mobile-menu');
+  if (toggle && menu) {
+    function closeMenu() {
+      if (menu.hidden) return;
+      toggle.setAttribute('aria-expanded', 'false');
+      menu.hidden = true;
+      toggle.querySelector('.material-symbols-outlined').textContent = 'menu';
+      toggle.setAttribute('aria-label', 'Open menu');
+    }
+    function openMenu() {
+      toggle.setAttribute('aria-expanded', 'true');
+      menu.hidden = false;
+      toggle.querySelector('.material-symbols-outlined').textContent = 'close';
+      toggle.setAttribute('aria-label', 'Close menu');
+    }
+    toggle.addEventListener('click', function () {
+      (toggle.getAttribute('aria-expanded') === 'true') ? closeMenu() : openMenu();
+    });
+    // Close on link click
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeMenu);
+    });
+    // Close on Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !menu.hidden) { closeMenu(); toggle.focus(); }
+    });
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+      if (menu.hidden) return;
+      if (!menu.contains(e.target) && !toggle.contains(e.target)) closeMenu();
+    });
+  }
+
+  /* ---------- Before / After comparison ---------- */
+  var slider = document.getElementById('comparison-range');
+  var clippedLayer = document.getElementById('comparison-clipped-layer');
+  var divider = document.getElementById('comparison-divider');
+  var beforeImg = document.getElementById('comparison-before-img');
+  var container = document.getElementById('comparison-slider-container');
+
+  if (slider && clippedLayer && divider && beforeImg && container) {
+    function syncBeforeWidth() { beforeImg.style.width = container.offsetWidth + 'px'; }
+    window.addEventListener('resize', syncBeforeWidth, { passive: true });
+    syncBeforeWidth();
+    slider.addEventListener('input', function (e) {
+      var val = e.target.value;
+      clippedLayer.style.width = val + '%';
+      divider.style.left = val + '%';
+    });
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('.reveal');
+
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealEls.forEach(function (el) { el.classList.add('in'); });
+    return;
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach(function (el) { io.observe(el); });
+})();
+</script>
+</body>
+                                                                                               </html>
